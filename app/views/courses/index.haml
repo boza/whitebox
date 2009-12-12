@@ -1,0 +1,42 @@
+%h2
+  Courses
+  %span
+    = link_to "New course"
+    
+  %h3
+    Marketing
+  %p
+    %strong
+      Sep 1 to Dec 21:
+    Marketing products online, ads.
+    = link_to "Prof. Smith"
+    
+  %h3
+    = link_to "Business Planning"
+  %p
+    %strong
+      Jan 3 to Mar 23:
+    Financials and valuation methods. Best practices for income management. Book-keeping. Investment.
+    From a statup to an IPO.
+    = link_to "Prof. Jones"
+    
+  %ol
+    %li Testing styles
+    %li Yeah
+
+- content_for :column do
+  .category
+    %h2 Category
+    .element= link_to "Note"
+    .element= link_to "Note"
+    .new_element
+      +
+      = link_to "Add new"
+
+  .category
+    %h2 Category
+    .element= link_to "Note"
+    .element= link_to "Note"
+    .new_element
+      +
+      = link_to "Add new"
