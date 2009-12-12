@@ -1,0 +1,10 @@
+.empty
+.DS_Store
+.idea
+coverage/*
+db/*.sqlite3
+log/*.log
+tmp/*
+public/stylesheets/*.css
+uploads/*
+webrat-*
