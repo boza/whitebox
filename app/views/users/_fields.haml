@@ -1,0 +1,27 @@
+.login.text_field
+  = f.label :username, t('.username')
+  = f.text_field :username
+
+.first_name.text_field
+  = f.label :first_name, t('.first_name')
+  = f.text_field :first_name
+
+.last_name.text_field
+  = f.label :last_name, t('.last_name')
+  = f.text_field :last_name
+
+.email.text_field
+  = f.label :email, t('.email')
+  = f.text_field :email
+
+.password.text_field
+  = f.label :password, t('.password')
+  = f.password_field :password
+
+.password_confirmation.text_field
+  = f.label :password_confirmation, t('.password_confirmation')
+  = f.password_field :password_confirmation
+
+.language.select
+  = f.label :language, t('.language')
+  = f.select :language, User::LANGUAGES

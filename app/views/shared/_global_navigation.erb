@@ -1,0 +1,44 @@
+<div class="global_navigation"><%  
+render_tabnav :global do 
+
+  if logged_in?
+    add_tab do |t|
+      t.named "#{current_user.username}"
+      #t.links_to user_path(current_user)
+      t.tab_index = '50'
+    end
+    
+    add_tab do |t|
+      t.named t('.logout')
+      t.links_to logout_path
+      t.tab_index = '53'
+    end
+  else
+    add_tab do |t|
+      t.named t('.home')
+      t.links_to APP_CONFIG['home_url']
+      t.tab_index = '50'
+    end if APP_CONFIG.has_key? 'home_url'
+
+    add_tab do |t|
+      t.named t('.signup')
+      t.tab_index = '54'
+      t.links_to signup_path
+      t.highlights_on :controller => :users, :action => :new
+      t.highlights_on :controller => :users, :action => :create
+      t.li_class = 'right_side'
+    end
+
+    add_tab do |t|
+      t.named t('.login')
+      t.links_to login_path
+      t.tab_index = '53'      
+      t.highlights_on :controller => :sessions, :action => :new
+      t.highlights_on :controller => :sessions, :action => :create
+      t.li_class = 'right_side'
+    end
+        
+  end
+  
+end
+%><div class="clear"></div></div>

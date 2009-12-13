@@ -1,0 +1,14 @@
+%h2= APP_CONFIG['app_name']
+
+%p A new tool for e-learning.
+
+%p
+  = link_to "Create an account", new_user_path
+  for your Learning Center now!
+
+- content_for :column do
+  .category
+    %h2= t('.log_in')
+    - form_tag sessions_path, :class => 'new_session', :id => 'new_session' do
+      = session_fields
+      = submit_tag t('.log_in')

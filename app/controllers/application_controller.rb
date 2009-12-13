@@ -2,8 +2,12 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+
+  include Authentication
   helper :all
   protect_from_forgery
+  
+  before_filter :login_required
 
   filter_parameter_logging :password
 

@@ -1,0 +1,6 @@
+.login.text_field
+  = label_tag 'login', t('.email_or_username')
+  = text_field_tag 'login', @login, :class => 'focus', :tabindex => 200
+.password.text_field
+  = label_tag "password", (t('.password') + " " + link_to(t('.forgot'), '', :tabindex => 202))
+  = password_field_tag 'password', nil, :tabindex => 201

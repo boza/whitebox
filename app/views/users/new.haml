@@ -1,0 +1,13 @@
+%h2= t('.title')
+
+- form_for @user do |f|
+  = f.error_messages
+  = user_fields(f, @user)
+  .submit
+    = submit_tag t('.submit'), :tabindex => 300
+
+- content_for :column do
+  .category
+    %h2 Your learning center
+    %p By creating an account, you will now be able to run your learning system online.
+    %p You will be the administrator of your learning center. You can add more people to it later.
