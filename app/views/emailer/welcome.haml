@@ -1,0 +1,11 @@
+.email{ :style => email_global }
+  %p{ :style => email_text(:small) }
+    = t('emailer.common.do_not_answer')
+
+  .box{ :style => email_box }  
+    %p= t('emailer.welcome.hey', :name => @user.name)
+    %h2{ email_text(:big) }
+      = link_to t('emailer.welcome.login', :app_name => APP_CONFIG['app_name']), login_url
+
+  .footer{ :style => email_text(:small) }
+    %p= t('emailer.common.problems', :support => APP_CONFIG['support'])

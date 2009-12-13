@@ -1,15 +1,13 @@
 en:
 
-  shared:
-    global_navigation:
-      logout: Logout
-      home: Home
-      login: Login
-      signup: Create an account
-    footer:
-      site: Product site
-      support: Problems? Suggestions?
-      help: Help
+  emailer:
+    common:
+      do_not_answer: Do not answer to this email
+      problems: Report any abuse or problems to {{support}}
+    welcome:
+      title: Get started with {{app_name}}!
+      hey: Hey, {{name}}!
+      login: Log in now to start using {{app_name}}      
 
   sessions:
     new:
@@ -23,6 +21,17 @@ en:
       invalid_login: Invalid login or password.
     destroy:
       logout: You have been logged out.
+
+  shared:
+    global_navigation:
+      logout: Logout
+      home: Home
+      login: Login
+      signup: Create an account
+    footer:
+      site: Product site
+      support: Problems? Suggestions?
+      help: Help
 
   users:
     new:

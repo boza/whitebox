@@ -7,4 +7,12 @@ class User < ActiveRecord::Base
 
   LANGUAGES = [['English', 'en']]
 
+  def name
+    "#{first_name} #{last_name}"
+  end
+
+  def after_create
+    Emailer.deliver_welcome(self)
+  end
+
 end

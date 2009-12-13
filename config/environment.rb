@@ -13,9 +13,10 @@ Rails::Initializer.run do |config|
 
   config.i18n.default_locale = :en
 
+  config.action_mailer.default_url_options = { :host => APP_CONFIG['app_domain'] }
+
   if APP_CONFIG['allow_outgoing_email']
     config.action_mailer.delivery_method = :smtp
-    config.action_mailer.default_url_options = { :host => APP_CONFIG['app_domain'] }
     config.action_mailer.smtp_settings = {
      :address        => APP_CONFIG['outgoing']['host'],
      :port           => APP_CONFIG['outgoing']['port'],
